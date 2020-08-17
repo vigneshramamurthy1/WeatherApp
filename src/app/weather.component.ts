@@ -7,6 +7,7 @@ import { WeatherService } from './weather.service';
   styleUrls: [ './app.component.css' ]
 })
 export class WeatherComponent  {
+  data : any = [];
   constructor(private weatherService: WeatherService){
 
   }
@@ -97,34 +98,78 @@ export class WeatherComponent  {
   citi7 ="";
   citi8 ="";
   citi9 ="";
-
+  showError1 ="";
+  showError2 ="";
+  showError3 ="";
+  showError4 ="";
+  showError5 ="";
+  showError6 ="";
+  showError7 ="";
+  showError8 ="";
+  showError9 ="";
   
     updateInput1(value: string) { 
     this.valueInput1 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError1 = "City is not Available Or Wrong City Name";
+    }
     }
     updateInput2(value: string) { 
     this.valueInput2 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError2 = "City is not Available Or Wrong City Name";
+    }
     }
     updateInput3(value: string) { 
     this.valueInput3 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError3 = "City is not Available Or Wrong City Name";
+    }
     }
     updateInput4(value: string) { 
     this.valueInput4 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError4 = "City is not Available Or Wrong City Name";
+    }
     }
     updateInput5(value: string) { 
     this.valueInput5 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError5 = "City is not Available Or Wrong City Name";
+    }
     }
     updateInput6(value: string) { 
     this.valueInput6 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError6 = "City is not Available Or Wrong City Name";
+    }
     }
     updateInput7(value: string) { 
     this.valueInput7 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError7 = "City is not Available Or Wrong City Name";
+    }
     }
     updateInput8(value: string) { 
     this.valueInput8 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError8 = "City is not Available Or Wrong City Name";
+    }
     }
     updateInput9(value: string) { 
     this.valueInput9 = value; 
+    this.data.filter(f=> f.name === this.valueInput1);
+    if(this.data.length == 0){
+    this.showError9 = "City is not Available Or Wrong City Name";
+    }
     }
 
     editOn1(value: string){
@@ -194,9 +239,9 @@ updateEdit9(value: string){
 }
 
 callCities(){
-  var data = this.weatherService.getCities();
-    console.log(data);
-    localStorage.setItem("citi",data);
+    this.data = this.weatherService.getCities();
+    console.log(this.data);
+    localStorage.setItem("citi",this.data);
 }
 
 }

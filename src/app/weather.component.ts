@@ -110,64 +110,67 @@ export class WeatherComponent  {
   
     updateInput1(value: string) { 
     this.valueInput1 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
+    alert(this.valueInput1)
+    var data = this.data.filter(f=> f["name"] === this.valueInput1);
+    console.log(data)
+    if(data.length > 1 ){
     this.showError1 = "City is not Available Or Wrong City Name";
     }
     }
     updateInput2(value: string) { 
     this.valueInput2 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
-    this.showError2 = "City is not Available Or Wrong City Name";
+    var data = this.data.filter(f=> f["name"] === this.valueInput2);
+    console.log(data)
+    if(data.length > 1 ){
+    this.showError1 = "City is not Available Or Wrong City Name";
     }
     }
     updateInput3(value: string) { 
     this.valueInput3 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
+    this.data.filter(f=> f["name"] === this.valueInput1);
+    if(this.data.length > 1 ){
     this.showError3 = "City is not Available Or Wrong City Name";
     }
     }
     updateInput4(value: string) { 
     this.valueInput4 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
+    this.data.filter(f=> f["name"] === this.valueInput1);
+    if(this.data.length > 1 ){
     this.showError4 = "City is not Available Or Wrong City Name";
     }
     }
     updateInput5(value: string) { 
     this.valueInput5 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
+    this.data.filter(f=> f["name"] === this.valueInput1);
+    if(this.data.length > 1 ){
     this.showError5 = "City is not Available Or Wrong City Name";
     }
     }
     updateInput6(value: string) { 
     this.valueInput6 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
+    this.data.filter(f=> f["name"] === this.valueInput1);
+    if(this.data.length > 1 ){
     this.showError6 = "City is not Available Or Wrong City Name";
     }
     }
     updateInput7(value: string) { 
     this.valueInput7 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
+    this.data.filter(f=> f["name"] === this.valueInput1);
+    if(this.data.length > 1 ){
     this.showError7 = "City is not Available Or Wrong City Name";
     }
     }
     updateInput8(value: string) { 
     this.valueInput8 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
+    this.data.filter(f=> f["name"] === this.valueInput1);
+    if(this.data.length > 1 ){
     this.showError8 = "City is not Available Or Wrong City Name";
     }
     }
     updateInput9(value: string) { 
     this.valueInput9 = value; 
-    this.data.filter(f=> f.name === this.valueInput1);
-    if(this.data.length == 0){
+    this.data.filter(f=> f["name"] === this.valueInput1);
+    if(this.data.length > 1 ){
     this.showError9 = "City is not Available Or Wrong City Name";
     }
     }
@@ -209,34 +212,7 @@ export class WeatherComponent  {
       this.showOnData9 = false;
     }
 
-updateEdit1(value: string){
 
-}
-updateEdit2(value: string){
-  
-}
-updateEdit3(value: string){
-  
-}
-updateEdit4(value: string){
-  
-}
-updateEdit5(value: string){
-  
-}
-updateEdit6(value: string){
-  
-}
-updateEdit7(value: string){
-  
-}
-
-updateEdit8(value: string){
-  
-}
-updateEdit9(value: string){
-  
-}
 
 callCities(){
     this.data = this.weatherService.getCities();

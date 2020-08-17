@@ -1,0 +1,161 @@
+<div class="container">
+	<div class="card-deck mt-4">
+		<div class="card text-center">
+			<div  class="card-block">
+				<h4 *ngIf="showOnData1" class="card-title">{{citi1}}</h4>
+				<button *ngIf="showOnData1" type="button" style="float:right" (click)="editOn1('box1')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData1" style="float:left">
+					<h3>{{temp1}}&#730;C</h3><span>{{weatherStatus1}}</span></aside>
+				<aside *ngIf="showOnData1">
+					<p>Humidity : {{humudity1}}</p>
+					<p>Wind Speed: {{windSpeed1}}</p>
+				</aside>
+				<input *ngIf="showOn1 == 'box1'" #box1 (keyup.enter)="updateInput1(box1.value)" [(ngModel)]="input1" placeholder="Enter City Name" (blur)="updateInput1(box1.value)"> 
+        <button *ngIf="showOn1 == 'box1'" type="button" style="float:right" (click)="updateEdit1(input1)" class="btn btn-primary btn-sm">&#10003; </button>
+        <button *ngIf="showOn1 == 'box1'" type="button" style="float:right" (click)="showOnData1=true; showOn1=''" class="btn btn-danger btn-sm button-space">&#88; </button>
+        </div>
+		</div>
+		<div class="card text-center">
+			<div class="card-block">
+				<h4 *ngIf="showOnData2" class="card-title">{{citi2}}</h4>
+				<button *ngIf="showOnData2" type="button" style="float:right" (click)="editOn2('box2')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData2" style="float:left">
+					<h3>{{temp2}}&#730;C</h3><span>{{weatherStatus2}}</span></aside>
+				<aside *ngIf="showOnData2">
+					<p>Humidity : {{humudity2}}</p>
+					<p>Wind Speed {{windSpeed2}}</p>
+				</aside>
+				<input *ngIf="showOn2 == 'box2'" #box2 (keyup.enter)="updateInput2(box2.value)" [(ngModel)]="input2" placeholder="Enter City Name" (blur)="updateInput2(box2.value)">   
+        <button *ngIf="showOn2 == 'box2'" type="button" style="float:right" (click)="updateEdit2(input2)" class="btn btn-primary btn-sm">&#10003; </button>  
+        <button *ngIf="showOn2 == 'box2'" type="button" style="float:right" (click)="showOnData2=true; showOn2=''" class="btn btn-danger btn-sm button-space">&#88; </button>
+        </div>
+		</div>
+		<div class="card text-center">
+			<div  class="card-block">
+				<h4 *ngIf="showOnData3" class="card-title">{{citi3}}</h4>
+				<button *ngIf="showOnData3" type="button" style="float:right" (click)="editOn3('box3')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData3" style="float:left">
+					<h3>{{temp3}}&#730;C</h3><span>{{weatherStatus3}}</span></aside>
+				<aside *ngIf="showOnData3">
+					<p>Humidity : {{humudity3}}</p>
+					<p>Wind Speed {{windSpeed3}}</p>
+				</aside>
+				<input *ngIf="showOn3 == 'box3'" #box3 (keyup.enter)="updateInput3(box3.value)" [(ngModel)]="input3" placeholder="Enter City Name" (blur)="updateInput3(box3.value)">        
+        <button *ngIf="showOn3 == 'box3'" type="button" style="float:right" (click)="updateEdit3(input3)" class="btn btn-primary btn-sm">&#10003; </button>  
+        <button *ngIf="showOn3 == 'box3'" type="button" style="float:right" (click)="showOnData3=true; showOn3=''" class="btn btn-danger btn-sm button-space">&#88; </button>
+        </div>
+		</div> 
+	</div>
+	<div class="card-deck mt-4">
+		<div class="card text-center">
+			<div class="card-block">
+				<h4 *ngIf="showOnData4" class="card-title">{{citi4}}</h4>
+				<button *ngIf="showOnData4" type="button" style="float:right" (click)="editOn4('box4')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData4" style="float:left">
+					<h3>{{temp4}}&#730;C</h3><span>{{weatherStatus4}}</span></aside>
+				<aside *ngIf="showOnData4">
+					<p>Humidity : {{humudity4}}</p>
+					<p>Wind Speed {{windSpeed4}}</p>
+				</aside>
+				<input *ngIf="showOn4 == 'box4'" #box4 (keyup.enter)="updateInput4(box4.value)" [(ngModel)]="input4" placeholder="Enter City Name" (blur)="updateInput4(box4.value)">
+        <button *ngIf="showOn4 == 'box4'" type="button" style="float:right" (click)="updateEdit4(input4)" class="btn btn-primary btn-sm">&#10003; </button>  
+        <button *ngIf="showOn4 == 'box4'" type="button" style="float:right" (click)="showOnData4=true; showOn4=''" class="btn btn-danger btn-sm button-space">&#88; </button>
+        </div>
+		</div>
+		<div class="card text-center">
+			<div class="card-block">
+				<h4 *ngIf="showOnData5" class="card-title">{{citi5}}</h4>
+				<button *ngIf="showOnData5" type="button" style="float:right" (click)="editOn5('box5')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData5" style="float:left">
+					<h3>{{temp5}}&#730;C</h3><span>{{weatherStatus5}}</span></aside>
+				<aside *ngIf="showOnData5">
+					<p>Humidity : {{humudity5}}</p>
+					<p>Wind Speed {{windSpeed5}}</p>
+				</aside>
+				<input *ngIf="showOn5 == 'box5'" #box5 (keyup.enter)="updateInput5(box5.value)" [(ngModel)]="input5" placeholder="Enter City Name" (blur)="updateInput5(box5.value)"> 
+        <button *ngIf="showOn5 == 'box5'" type="button" style="float:right" (click)="updateEdit5(input5)" class="btn btn-primary btn-sm">&#10003; </button>  
+        <button *ngIf="showOn5 == 'box5'" type="button" style="float:right" (click)="showOnData5=true; showOn5=''" class="btn btn-danger btn-sm button-space">&#88; </button></div>
+
+		</div>
+		<div class="card text-center">
+			<div class="card-block">
+				<h4 *ngIf="showOnData6" class="card-title">{{citi6}}</h4>
+				<button *ngIf="showOnData6" type="button" style="float:right" (click)="editOn6('box6')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData6" style="float:left">
+					<h3>{{temp6}}&#730;C</h3><span>{{weatherStatus6}}</span></aside>
+				<aside *ngIf="showOnData6">
+					<p>Humidity : {{humudity6}}</p>
+					<p>Wind Speed {{windSpeed6}}</p>
+				</aside>
+				<input *ngIf="showOn6 == 'box6'" #box6 (keyup.enter)="updateInput6(box6.value)" [(ngModel)]="input6" placeholder="Enter City Name" (blur)="updateInput6(box6.value)"> 
+        <button *ngIf="showOn6 == 'box6'" type="button" style="float:right" (click)="updateEdit6(input7)" class="btn btn-primary btn-sm">&#10003; </button>  
+        <button *ngIf="showOn6 == 'box6'" type="button" style="float:right" (click)="showOnData6=true; showOn6=''" class="btn btn-danger btn-sm button-space">&#88; </button>
+        </div>
+		</div>
+	</div>
+	<div class="card-deck mt-4">
+		<div class="card text-center">
+			<div class="card-block">
+				<h4 *ngIf="showOnData7" class="card-title">{{citi7}}</h4>
+				<button *ngIf="showOnData7" type="button" style="float:right" (click)="editOn7('box7')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData7" style="float:left">
+					<h3>{{temp7}}&#730;C</h3> <span>{{weatherStatus7}}</span></aside>
+				<aside *ngIf="showOnData7">
+					<p>Humidity : {{humudity7}}</p>
+					<p>Wind Speed {{windSpeed7}}</p>
+				</aside>
+				<input *ngIf="showOn7 == 'box7'" #box7 (keyup.enter)="updateInput7(box7.value)" [(ngModel)]="input7" placeholder="Enter City Name" (blur)="updateInput8(box7.value)"> 
+        <button *ngIf="showOn7 == 'box7'" type="button" style="float:right" (click)="updateEdit7(input7)" class="btn btn-primary btn-sm">&#10003; </button>  
+        <button *ngIf="showOn7 == 'box7'" type="button" style="float:right" (click)="showOnData7=true; showOn7=''" class="btn btn-danger btn-sm button-space">&#88; </button>
+        </div>
+		</div>
+		<div class="card text-center">
+			<div class="card-block">
+				<h4 *ngIf="showOnData8" class="card-title">{{citi8}}</h4>
+				<button *ngIf="showOnData8" type="button" style="float:right" (click)="editOn8('box8')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData8" style="float:left">
+					<h3>{{temp8}}&#730;C</h3> <span>{{weatherStatus8}}</span></aside>
+				<aside *ngIf="showOnData8">
+					<p>Humidity : {{humudity8}}</p>
+					<p>Wind Speed {{windSpeed8}}</p>
+				</aside>
+				<input *ngIf="showOn8 == 'box8'" #box8 (keyup.enter)="updateInput8(box8.value)" [(ngModel)]="input8" placeholder="Enter City Name" (blur)="updateInput8(box8.value)"> 
+        <button *ngIf="showOn8 == 'box8'" type="button" style="float:right" (click)="updateEdit8(input8)" class="btn btn-primary btn-sm">&#10003; </button>  
+        <button *ngIf="showOn8 == 'box8'" type="button" style="float:right" (click)="showOnData8=true; showOn8=''" class="btn btn-danger btn-sm button-space">&#88; </button>
+        </div>
+		</div>
+		<div class="card text-center">
+			<div class="card-block">
+				<h4 *ngIf="showOnData9" class="card-title">{{citi9}}</h4>
+				<button *ngIf="showOnData9" type="button" style="float:right" (click)="editOn9('box9')" class="btn btn-default btn-sm">&#x270f; </button>
+			</div>
+			<div class="card-footer">
+				<aside *ngIf="showOnData9" style="float:left">
+					<h3>{{temp9}}&#730;C</h3><span>{{weatherStatus9}}</span></aside>
+				<aside *ngIf="showOnData9">
+					<p>Humidity : {{humudity9}}</p>
+					<p>Wind Speed {{windSpeed9}}</p>
+				</aside>
+				<input *ngIf="showOn9 == 'box9'" #box9 (keyup.enter)="updateInput9(box9.value)" [(ngModel)]="input9" placeholder="Enter City Name" (blur)="updateInput9(box9.value)"> 
+         <button *ngIf="showOn9 == 'box9'" type="button" style="float:right" (click)="updateEdit9(input9)" class="btn btn-primary btn-sm">&#10003; </button> 
+        <button *ngIf="showOn9 == 'box9'" type="button" style="float:right" (click)="showOnData9=true; showOn9=''" class="btn btn-danger btn-sm button-space">&#88; </button>
+        </div>
+		</div>
+	</div>
+</div>

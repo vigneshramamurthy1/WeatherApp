@@ -194,10 +194,9 @@ updateEdit9(value: string){
 }
 
 callCities(){
-  this.weatherService.getCities().subscribe(data => {
+  var data = this.weatherService.getCities();
     console.log(data);
-    //localStorage.setItem("certona",resultData);
-  });
+    localStorage.setItem("citi",data);
 }
 
 }

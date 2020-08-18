@@ -9,9 +9,7 @@ export class WeatherService {
 		return this.citiList;
 	}
 
-  public citiList ={
-    "citi": [
-    {
+  public citiList =  [{
         "id": 833,
         "name": "Ḩeşār-e Sefīd",
         "state": "",
@@ -185400,7 +185398,5 @@ export class WeatherService {
             "lon": 20.24386,
             "lat": 49.136372
         }
-    }
-  }
-  ]
+    }]
 }

@@ -271,14 +271,14 @@ export class WeatherComponent  implements OnInit{
 
 
     getOpenWetherApi(obj, event){
-		let id = obj.id;
-		this.weatherService.getWeather(obj, this.ApiKey).subscribe(data =>{
+		var id = obj["id"];
+		this.weatherService.getWeather(id, this.ApiKey).subscribe(data =>{
 		var obj = data;
 		if(event ==1){
 		this.citi1 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp1 = (temp - 273.15;
-		this.weatherStatus1 = obj["weather"]["description"];
+		this.temp1 = Number(temp) - 273.15;
+		this.weatherStatus1 = obj["weather"][0]["description"];
 		this.humudity1 = obj["main"]["humidity"];
 		this.windSpeed1 = obj["wind"]["speed"];
 	    }
@@ -286,7 +286,7 @@ export class WeatherComponent  implements OnInit{
 		this.citi2 = obj["name"];
 		var temp = obj["main"]["temp"];
 		this.temp2 = (temp - 273.15);
-		this.weatherStatus2 = obj["weather"]["description"];
+		this.weatherStatus2 = obj["weather"][0]["description"];
 		this.humudity2 = obj["main"]["humidity"];
 		this.windSpeed2 = obj["wind"]["speed"];
 	    } 
@@ -294,7 +294,7 @@ export class WeatherComponent  implements OnInit{
 		this.citi3 = obj["name"];
 		var temp = obj["main"]["temp"];
 		this.temp3 = (temp - 273.15);
-		this.weatherStatus3 = obj["weather"]["description"];
+		this.weatherStatus3 = obj["weather"][0]["description"];
 		this.humudity3 = obj["main"]["humidity"];
 		this.windSpeed3 = obj["wind"]["speed"];
 	    } 
@@ -302,7 +302,7 @@ export class WeatherComponent  implements OnInit{
 		this.citi4 = obj["name"];
 		var temp = obj["main"]["temp"];
 		this.temp4 = (temp - 273.15);
-		this.weatherStatus4 = obj["weather"]["description"];
+		this.weatherStatus4 = obj["weather"][0]["description"];
 		this.humudity4 = obj["main"]["humidity"];
 		this.windSpeed4 = obj["wind"]["speed"];
 	    }
@@ -310,7 +310,7 @@ export class WeatherComponent  implements OnInit{
 		this.citi5 = obj["name"];
 		var temp = obj["main"]["temp"];
 		this.temp5 = (temp - 273.15);
-		this.weatherStatus5 = obj["weather"]["description"];
+		this.weatherStatus5 = obj["weather"][0]["description"];
 		this.humudity5 = obj["main"]["humidity"];
 		this.windSpeed5 = obj["wind"]["speed"];
 	    }
@@ -318,7 +318,7 @@ export class WeatherComponent  implements OnInit{
 		this.citi6 = obj["name"];
 		var temp = obj["main"]["temp"];
 		this.temp6 = (temp - 273.15);
-		this.weatherStatus6 = obj["weather"]["description"];
+		this.weatherStatus6 = obj["weather"][0]["description"];
 		this.humudity6 = obj["main"]["humidity"];
 		this.windSpeed6 = obj["wind"]["speed"];
 	    }
@@ -326,7 +326,7 @@ export class WeatherComponent  implements OnInit{
 		this.citi7 = obj["name"];
 		var temp = obj["main"]["temp"];
 		this.temp7 = (temp - 273.15);
-		this.weatherStatus7 = obj["weather"]["description"];
+		this.weatherStatus7 = obj["weather"][0]["description"];
 		this.humudity7 = obj["main"]["humidity"];
 		this.windSpeed7 = obj["wind"]["speed"];
 	    }
@@ -334,7 +334,7 @@ export class WeatherComponent  implements OnInit{
 		this.citi8 = obj["name"];
 		var temp = obj["main"]["temp"];
 		this.temp8 = (temp - 273.15);
-		this.weatherStatus8 = obj["weather"]["description"];
+		this.weatherStatus8 = obj["weather"][0]["description"];
 		this.humudity8 = obj["main"]["humidity"];
 		this.windSpeed8 = obj["wind"]["speed"];
 	    }
@@ -342,7 +342,7 @@ export class WeatherComponent  implements OnInit{
 		this.citi9 = obj["name"];
 		var temp = obj["main"]["temp"];
 		this.temp9 = (temp - 273.15);
-		this.weatherStatus9 = obj["weather"]["description"];
+		this.weatherStatus9 = obj["weather"][0]["description"];
 		this.humudity9 = obj["main"]["humidity"];
 		this.windSpeed9 = obj["wind"]["speed"];
 	    }

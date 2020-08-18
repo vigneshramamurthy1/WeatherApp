@@ -10,7 +10,7 @@ export class WeatherService {
 	}
 
   getWeather(id, key){
-    return this.http.get("http://api.openweathermap.org/data/2.5/weather?id="+id+"&appid="+key);
+    return this.http.get("https://api.openweathermap.org/data/2.5/weather?id="+id+"&appid="+key);
   }
 
   public citiList =  [{

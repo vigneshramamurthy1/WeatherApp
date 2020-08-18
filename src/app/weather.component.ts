@@ -13,7 +13,9 @@ export class WeatherComponent  implements OnInit{
   }
 
   ngOnInit() {
-    this.callCities();
+    this.data = this.weatherService.getCities();
+    console.log(this.data);
+    localStorage.setItem("citi",this.data);
   }
 
   @Input() name: string;
@@ -214,10 +216,6 @@ export class WeatherComponent  implements OnInit{
 
 
 
-callCities(){
-    this.data = this.weatherService.getCities();
-    console.log(this.data);
-    localStorage.setItem("citi",this.data);
-}
+
 
 }

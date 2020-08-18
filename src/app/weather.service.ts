@@ -5,7 +5,7 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class WeatherService {
 	constructor(protected http: HttpClient) { }
-    getCities(): any {
+    getCities() {
 		return this.citiList;
 	}
 

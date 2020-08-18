@@ -9,6 +9,10 @@ export class WeatherService {
 		return this.citiList;
 	}
 
+  getWeather(id, key){
+    return this.http.get("http://api.openweathermap.org/data/2.5/weather?id="+id+"&appid="+key);
+  }
+
   public citiList =  [{
         "id": 833,
         "name": "Ḩeşār-e Sefīd",

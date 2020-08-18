@@ -71,9 +71,9 @@ export class WeatherComponent  implements OnInit{
   temp4 = 0;
   temp5 = 0;
   temp6 = 0;
-  temp7 = ;
-  temp8 = "";
-  temp9 = "";
+  temp7 = 0;
+  temp8 = 0;
+  temp9 = 0;
   humudity1 ="";
   humudity2 ="";
   humudity3 ="";
@@ -118,6 +118,9 @@ export class WeatherComponent  implements OnInit{
     console.log(data)
     if(data && data[0] ){
 	this.showError1 ="";
+	this.getOpenWetherApi(data[0], 1);
+	this.showOn1 = "";
+        this.showOnData1 = true;
 	}
 	else{
     this.showError1 = "City is not Available Or Wrong City Name";
@@ -129,6 +132,9 @@ export class WeatherComponent  implements OnInit{
     console.log(data)
     if(data && data[0] ){
 		this.showError2 ="";
+		this.getOpenWetherApi(data[0], 2);
+		this.showOn2 = "";
+        this.showOnData2 = true;
     }
     else{
     this.showError2 = "City is not Available Or Wrong City Name";
@@ -139,6 +145,9 @@ export class WeatherComponent  implements OnInit{
     var data =  this.data.filter(f=> f["name"] === this.valueInput3);
     if(data && data[0] ){
 		this.showError3 ="";
+		this.getOpenWetherApi(data[0], 3);
+		this.showOn3 = "";
+        this.showOnData3 = true;
 	}
     else{
     this.showError3 = "City is not Available Or Wrong City Name";
@@ -149,6 +158,9 @@ export class WeatherComponent  implements OnInit{
     var data =  this.data.filter(f=> f["name"] === this.valueInput4);
     if(data && data[0] ){
 		this.showError4 ="";
+		this.getOpenWetherApi(data[0], 4);
+		this.showOn4 = "";
+        this.showOnData4 = true;
 	}
     else{
     this.showError4 = "City is not Available Or Wrong City Name";
@@ -159,6 +171,9 @@ export class WeatherComponent  implements OnInit{
     var data = this.data.filter(f=> f["name"] === this.valueInput5);
     if(data && data[0] ){
 		this.showError5 ="";
+		this.getOpenWetherApi(data[0], 5);
+		this.showOn5 = "";
+        this.showOnData5 = true;
 	}
     else{
     this.showError5 = "City is not Available Or Wrong City Name";
@@ -169,6 +184,9 @@ export class WeatherComponent  implements OnInit{
     var data = this.data.filter(f=> f["name"] === this.valueInput6);
     if(data && data[0] ){
 		this.showError6 ="";
+		this.getOpenWetherApi(data[0], 6);
+		this.showOn6 = "";
+        this.showOnData6 = true;
 	}
     else{
     this.showError6 = "City is not Available Or Wrong City Name";
@@ -179,6 +197,9 @@ export class WeatherComponent  implements OnInit{
     var data = this.data.filter(f=> f["name"] === this.valueInput7);
     if(data && data[0]){
 		this.showError7 ="";
+		this.getOpenWetherApi(data[0], 7);
+		this.showOn7 = "";
+        this.showOnData7 = true;
 	}
     else{
     this.showError7 = "City is not Available Or Wrong City Name";
@@ -189,6 +210,9 @@ export class WeatherComponent  implements OnInit{
     var data =  this.data.filter(f=> f["name"] === this.valueInput8);
     if(data && data[0] ){
 		this.showError8 ="";
+		this.getOpenWetherApi(data[0], 8);
+		this.showOn8 = "";
+        this.showOnData8 = true;
 	}
     else{
     this.showError8 = "City is not Available Or Wrong City Name";
@@ -199,6 +223,9 @@ export class WeatherComponent  implements OnInit{
     var data =  this.data.filter(f=> f["name"] === this.valueInput9);
     if(data && data[0] ){
 		this.showError9 ="";
+		this.getOpenWetherApi(data[0], 9);
+		this.showOn9 = "";
+        this.showOnData9 = true;
 	}
     else{
     this.showError9 = "City is not Available Or Wrong City Name";
@@ -250,7 +277,7 @@ export class WeatherComponent  implements OnInit{
 		if(event ==1){
 		this.citi1 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp1 = temp - 273.15;
+		this.temp1 = (temp - 273.15;
 		this.weatherStatus1 = obj["weather"]["description"];
 		this.humudity1 = obj["main"]["humidity"];
 		this.windSpeed1 = obj["wind"]["speed"];
@@ -258,7 +285,7 @@ export class WeatherComponent  implements OnInit{
 		if(event == 2){
 		this.citi2 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp2 = temp - 273.15;
+		this.temp2 = (temp - 273.15);
 		this.weatherStatus2 = obj["weather"]["description"];
 		this.humudity2 = obj["main"]["humidity"];
 		this.windSpeed2 = obj["wind"]["speed"];
@@ -266,7 +293,7 @@ export class WeatherComponent  implements OnInit{
 		if(event == 3){
 		this.citi3 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp3 = temp - 273.15;
+		this.temp3 = (temp - 273.15);
 		this.weatherStatus3 = obj["weather"]["description"];
 		this.humudity3 = obj["main"]["humidity"];
 		this.windSpeed3 = obj["wind"]["speed"];
@@ -274,7 +301,7 @@ export class WeatherComponent  implements OnInit{
 		if(event == 4){
 		this.citi4 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp4 = temp - 273.15;
+		this.temp4 = (temp - 273.15);
 		this.weatherStatus4 = obj["weather"]["description"];
 		this.humudity4 = obj["main"]["humidity"];
 		this.windSpeed4 = obj["wind"]["speed"];
@@ -282,7 +309,7 @@ export class WeatherComponent  implements OnInit{
 		if(event == 5){
 		this.citi5 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp5 = temp - 273.15;
+		this.temp5 = (temp - 273.15);
 		this.weatherStatus5 = obj["weather"]["description"];
 		this.humudity5 = obj["main"]["humidity"];
 		this.windSpeed5 = obj["wind"]["speed"];
@@ -290,7 +317,7 @@ export class WeatherComponent  implements OnInit{
 		if(event == 6){
 		this.citi6 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp6 = temp - 273.15;
+		this.temp6 = (temp - 273.15);
 		this.weatherStatus6 = obj["weather"]["description"];
 		this.humudity6 = obj["main"]["humidity"];
 		this.windSpeed6 = obj["wind"]["speed"];
@@ -298,7 +325,7 @@ export class WeatherComponent  implements OnInit{
 		if(event == 7){
 		this.citi7 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp7 = temp - 273.15;
+		this.temp7 = (temp - 273.15);
 		this.weatherStatus7 = obj["weather"]["description"];
 		this.humudity7 = obj["main"]["humidity"];
 		this.windSpeed7 = obj["wind"]["speed"];
@@ -306,15 +333,15 @@ export class WeatherComponent  implements OnInit{
 		if(event == 8){
 		this.citi8 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp8 = temp - 273.15;
+		this.temp8 = (temp - 273.15);
 		this.weatherStatus8 = obj["weather"]["description"];
 		this.humudity8 = obj["main"]["humidity"];
 		this.windSpeed8 = obj["wind"]["speed"];
 	    }
-		if(event == 9){
+		if(event ==9){
 		this.citi9 = obj["name"];
 		var temp = obj["main"]["temp"];
-		this.temp9 = temp - 273.15;
+		this.temp9 = (temp - 273.15);
 		this.weatherStatus9 = obj["weather"]["description"];
 		this.humudity9 = obj["main"]["humidity"];
 		this.windSpeed9 = obj["wind"]["speed"];

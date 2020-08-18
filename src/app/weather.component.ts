@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { WeatherService } from './weather.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { WeatherService } from './weather.service';
   templateUrl: './weather.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class WeatherComponent  {
+export class WeatherComponent  implements OnInit{
   data : any = [];
   constructor(private weatherService: WeatherService){
 
